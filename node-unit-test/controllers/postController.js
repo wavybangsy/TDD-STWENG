@@ -5,18 +5,18 @@ exports.addPost = (req, res) => {
   // const errors = validationResult(req);
 
   // if (errors.isEmpty()) {
-    const { title, content } = req.body;
+  const { title, content } = req.body;
 
-    const author = req.session.user;
+  const author = req.session.user;
 
-    postModel.create({ title, content, author }, (err, post) => {
-      if (err) {
-        req.flash("error_msg", "Could not create post. Please try again.");
-        res.redirect("/posts/add");
-      } else {
-        res.redirect("/posts");
-      }
-    });
+  postModel.create({ title, content, author }, (err, post) => {
+    if (err) {
+      req.flash("error_msg", "Could not create post. Please try again.");
+      res.redirect("/posts/add");
+    } else {
+      res.redirect("/posts");
+    }
+  });
   // } else {
   //   const messages = errors.array().map((item) => item.msg);
 
@@ -44,9 +44,9 @@ exports.getPost = (req, res) => {
 
   postModel.getById(postId, (err, post) => {
     if (err) {
-      res.render("error", {errorMessage: "Post not found"});
+      res.render("error", { errorMessage: "Post not found" });
     } else {
-      res.render("singlepost", { pageTitle: post.title, post: post.toObject() });
+      res.render("singlepost", { pageTitle: post.title, post: post.content });
     }
   });
 };

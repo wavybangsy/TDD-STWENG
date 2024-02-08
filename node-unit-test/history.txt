@@ -1,0 +1,36 @@
+
+ 4911  npm i -g jest
+ 4912  npm test
+ 4913  npm start
+ 4914  npm test
+ 4915  npm start
+ 4916  npm test
+ 4917  ../
+ 4918  cd
+ 4919  cd users
+ 4920  cd user
+ 4921  cd erikac
+ 4922  cd developer
+ 4923  cd github
+ 4924  ls
+ 4925  cd tdd-sweng
+ 4926  cd TDD-STWENG
+ 4927  ls
+ 4928  code .
+ 4929  npm test
+ 4930  npm run test
+ 4931  npm test
+ 4932  cd node-unit-test
+ 4933  npm test
+ 4934* ../
+ 4935  git add .
+ 4936  git commit -am "Add failing test for Module A"
+ 4937  git push
+ 4938* npm test
+ 4939* cd node-unit-test
+ 4940* npm test
+ 4941  git fetch
+ 4942  git pull
+ 4943  git stash
+ 4944  git pull
+ 4945  npm test
