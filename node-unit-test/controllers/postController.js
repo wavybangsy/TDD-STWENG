@@ -43,6 +43,10 @@ exports.getPost = (req, res) => {
   const postId = req.params.id;
 
   postModel.getById(postId, (err, post) => {
-    res.render("singlepost", { pageTitle: post.title, post: post.toObject() });
+    if (err) {
+      res.render("error", {errorMessage: "Post not found"});
+    } else {
+      res.render("singlepost", { pageTitle: post.title, post: post.toObject() });
+    }
   });
 };
